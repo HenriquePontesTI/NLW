@@ -27,6 +27,7 @@ interface Point {
   id: number;
   name: string;
   image: string;
+  image_url: string;
   latitude: number;
   longitude: number;
 }
@@ -40,7 +41,10 @@ const Points = () => {
   const [items, setItems] = useState<Item[]>([]);
   const [points, setPoints] = useState<Point[]>([]);
   const [selectedItems, setSelectedItems] = useState<number[]>([]);
-  const [initialPosition, setInitialPosition] = useState<[number, number]>([0,0]);
+  const [initialPosition, setInitialPosition] = useState<[number, number]>([
+    0,
+    0,
+  ]);
 
   const navigation = useNavigation();
   const route = useRoute();
@@ -137,7 +141,7 @@ const Points = () => {
                     <Image
                       style={styles.mapMarkerImage}
                       source={{
-                        uri: point.image,
+                        uri: point.image_url,
                       }}
                     />
                     <Text style={styles.mapMarkerTitle}>{point.name}</Text>
