@@ -40,7 +40,7 @@ $ npm run knex:seed
 Com as dependência instaladas e o banco de dados pronto, execute este comando para iniciar o servidor:
 
 ```bash
-$ npm start
+$ npm run dev
 ```
 
 ### Iniciar App Web
@@ -59,7 +59,7 @@ Com isso entre na pasta **"./mobile"** e execute os seguintes comandos:
 
 ```bash
 $ npm install
-$ expo start
+$ npm start
 ```
 
 Agora no seu celular, abra o aplicativo do **Expo** e escaneie o QRCode para iniciar.
